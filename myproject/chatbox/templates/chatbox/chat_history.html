@@ -1,0 +1,18 @@
+{% extends 'chatbox/base.html' %}
+
+{% block content %}
+<h1>Message History</h1>
+<ul class="list-group">
+  {% for item in chats_list %}
+  <li class="list-group-item">
+      <span class="text-info">message_text: </span> <span>{{ item.chat.message_text }}</span>
+      <br>
+      <span class="text-info">message_id: </span><span>{{ item.chat.id }}</span>
+      <br>
+      <span class="text-info">user_id: </span><span>{{ item.chat.user_id }}</span>
+      <br>
+      <span class="text-info">timestamp: </span><span>{{ item.chat.timestamp }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

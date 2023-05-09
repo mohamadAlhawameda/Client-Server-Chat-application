@@ -1,0 +1,16 @@
+{% extends 'chatbox/base.html' %}
+
+{% block content %}
+<h1>Response History</h1>
+<ul class="list-group">
+  {% for item in responses_list %}
+  <li class="list-group-item">
+      <span class="text-info">response_text: </span> <span>{{ item.response.response_text }}</span>
+      <br>
+      <span class="text-info">message_id: </span><span>{{ item.response.message_id }}</span>
+      <br>
+      <span class="text-info">timestamp: </span><span>{{ item.response.timestamp }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
